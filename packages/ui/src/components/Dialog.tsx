@@ -6,7 +6,7 @@ interface DialogProps {
 
 export const Dialog: React.FC<DialogProps> = (props) => {
   return (
-    <div>
+    <div className='w-full h-full items-center'>
       {/* Your component JSX here */}
     </div>
   );
