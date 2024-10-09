@@ -47,4 +47,14 @@ program
     console.log('Added Dialog component to your project.');
   });
 
+program
+  .command('add input')
+  .description('Add input component to your project')
+  .action(async () => {
+    const componentPath = path.join(__dirname, '..', '..', 'ui', 'src', 'components', 'input.tsx');
+    const destinationPath = path.join(process.cwd(), 'src', 'components', 'input.tsx');
+    await fs.copy(componentPath, destinationPath);
+    console.log('Added input component to your project.');
+  });
+
 program.parse();
